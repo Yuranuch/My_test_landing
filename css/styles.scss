@@ -271,12 +271,17 @@ h2 {
 .card-wrap {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 .card {
   position: relative;
-  width: 31.8%;
+  width: 31.5%;
   padding: 30px;
   background-color: #0a0917;
+  padding-bottom: 70px;
+}
+.card_width-50 {
+  width: 48.6%;
 }
 .card__info-block {
   margin-bottom: 10px;
@@ -319,6 +324,7 @@ h2 {
   width: 90%;
   p {
     padding-bottom: 10px;
+    z-index: 3;
   }
 }
 
@@ -334,7 +340,126 @@ h2 {
 }
 .btn-program-height {
   line-height: 40px;
+  position: absolute;
+  width: 83%;
+  bottom: 30px;
 }
 .card__photo {
   position: absolute;
+  width: 165px;
+  height: 165px;
+  top: 35px;
+  right: 0;
+  z-index: 2;
+  img {
+    width: 165px;
+    height: 165px;
+  }
 }
+.card__photo_large {
+  top: 40px;
+  width: 275px;
+  height: 275px;
+  img {
+    width: 275px;
+    height: 275px;
+  }
+}
+.section__button {
+  margin: 0 auto !important;
+  background: #069cfa none repeat scroll 0 0;
+  color: #fff;
+  animation: utp-one 1.25s infinite cubic-bezier(.66, 0, 0, 1);
+  height: 50px;
+  line-height: 50px;
+  width: 230px;
+  border-radius: 0px;
+  box-shadow: 6px 6px 21px -3px #69add861;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: inherit;
+  text-align: center;
+}
+.section__title {
+
+}
+.title__first-row {
+  text-shadow: none;
+  width: 100%;
+  color: #fff;
+  line-height: 1;
+  font-size: 32px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.title__second-row {
+  margin: 0 0 0 146px;
+  display: block;
+  color: #069cfa;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.section_flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.inner-section {
+  width: 70%;
+}
+.participation-block_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.participation-block {
+  box-shadow: 0 0 31px -2px #383434;
+  text-align: center;
+  padding: 40px;
+  color: #fff;
+  margin: 0 0 40px;
+  width: 48%;
+  background: rgba(10, 9, 23, 0.92);
+}
+.participation-block_fixed-height {
+  height: 310px;
+}
+.participation-block__title {
+  padding: 0 0 60px;
+  font-size: 28px;
+  width: 100%;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.participation-block__cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.cost-description {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 19px;
+  color: #fff;
+  z-index: 3;
+  width: 55%;
+  text-align: left;
+}
+.cost-price {
+  margin: 0px 0 0 0px;
+  font-weight: 700;
+  float: left;
+  font-size: 25px;
+  color: #069cfa;
+  letter-spacing: 1px;
+  padding: 0px 0px 0px;
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+}
+.btn-program-stand {
+  margin-top: 30px;
+  line-height: 40px;
+}
+
