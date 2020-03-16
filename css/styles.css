@@ -1,4 +1,338 @@
-.wrapper {
-  background: red !important; }
+@charset "UTF-8";
+/*╨Ю╨▒╨╜╤Г╨╗╨╡╨╜╨╕╨╡*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  font-family: 'PT Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  position: relative;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+h2 {
+  color: #242424;
+  width: 100%;
+  padding: 20px 0;
+  line-height: 1;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px; }
+
+/*--------------------*/
+.section__wrap {
+  background: black; }
+
+.section {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto 35px auto; }
+
+.section_padding-top {
+  display: flex;
+  padding: 49px 15px 0 15px;
+  justify-content: space-between; }
+
+.header__wrap {
+  width: 100% !important;
+  position: fixed; }
+
+.header {
+  max-width: 1170px;
+  padding: 7px 15px 0 15px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto; }
+
+.logo {
+  display: flex;
+  width: 150px;
+  margin-right: 40px; }
+  .logo span {
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 800;
+    border-radius: 5px;
+    font-size: 33px;
+    padding: 3px 5px 3px; }
+  .logo .logo__hi-part {
+    background: #069cfa;
+    color: #fff; }
+
+.header__navigation {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between; }
+  .header__navigation ul {
+    display: flex; }
+    .header__navigation ul li {
+      text-align: center; }
+      .header__navigation ul li a {
+        color: #fff;
+        line-height: 1.8em;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 8px 10px;
+        transition: all 0.2s ease-in 0.01s; }
+        .header__navigation ul li a:hover {
+          color: #069cfa; }
+        .header__navigation ul li a.active {
+          color: #069cfa; }
+
+.header__phone-button {
+  padding: 2px 0 0 0;
+  text-align: center;
+  font-family: PTSansSerif,sans-serif;
+  font-size: 1.1em;
+  color: #242424;
+  line-height: 1.8em;
+  font-weight: 400; }
+  .header__phone-button button {
+    padding: 0;
+    border-radius: 50%;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: button;
+    font-weight: 400;
+    line-height: normal;
+    outline-style: none;
+    font-size: 1em;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    text-align: center; }
+    .header__phone-button button i {
+      width: 36px !important;
+      height: 36px !important;
+      padding: 9px !important;
+      animation: glowing 1500ms infinite;
+      color: #ffffff;
+      background-color: #406ca5;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 21px;
+      box-shadow: 0 0 60px -3px rgba(144, 138, 138, 0.82);
+      display: inline-block;
+      text-rendering: auto;
+      text-transform: none; }
+
+.description {
+  padding-top: 30px;
+  width: 64.5%;
+  height: 522px;
+  background-image: url("../img/lektory_tokio_2.png");
+  background-size: 330px 480px;
+  background-repeat: no-repeat;
+  background-position: 100% 0; }
+
+.description_first-row {
+  color: white;
+  font-size: 21px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px black; }
+  .description_first-row > span {
+    margin-top: -30px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700 !important; }
+    .description_first-row > span .number {
+      font-size: 50px; }
+  .description_first-row .first-row_title {
+    line-height: 1; }
+
+.description__date {
+  text-shadow: 2px 2px black;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #fff700 !important;
+  font-weight: 700; }
+
+.description__title {
+  text-shadow: 2px 2px black;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1em;
+  color: #fff;
+  font-size: 38px; }
+
+.program-form {
+  margin-top: 95px;
+  width: 31.5%;
+  height: 322px;
+  padding: 20px 40px 10px;
+  background: rgba(10, 9, 23, 0.92) !important; }
+  .program-form input {
+    border-bottom: 2px solid #ffffff;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    font-size: 13px;
+    transition: 0.3s;
+    background: none;
+    color: white;
+    line-height: 38px;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 13px; }
+    .program-form input:focus {
+      background: white;
+      color: #333; }
+
+.program-form__title {
+  line-height: 1;
+  font-size: 15px;
+  width: 100%;
+  font-weight: 600;
+  padding: 0px 0px 0px 0px;
+  text-transform: uppercase;
+  display: flex;
+  opacity: 1;
+  color: #fff700;
+  text-shadow: 0 22px 46px #0d0b26;
+  cursor: pointer;
+  animation: utp-dop 1.35s infinite cubic-bezier(0.66, 0, 0, 1);
+  margin-bottom: 30px; }
+
+.self-data {
+  margin-bottom: 20px; }
+
+.btn-program {
+  box-shadow: none;
+  font-size: 13px;
+  line-height: 29px;
+  width: 100%;
+  background: rgba(37, 37, 39, 0);
+  border: 2px solid #069cfa;
+  color: #069cfa;
+  margin: 0 0 0 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: utp-one 1.25s infinite cubic-bezier(0.66, 0, 0, 1); }
+  .btn-program:hover {
+    background: #069cfa;
+    color: #fff; }
+
+.card-wrap {
+  display: flex;
+  justify-content: space-between; }
+
+.card {
+  position: relative;
+  width: 31.8%;
+  padding: 30px;
+  background-color: #0a0917; }
+
+.card__info-block {
+  margin-bottom: 10px; }
+
+.card__title {
+  margin: 0;
+  width: 100%;
+  padding: 0 0 10px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-size: 28px;
+  color: white; }
+
+.card__sub-title {
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #969696; }
+
+.card__date-events {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 800;
+  width: 100%;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+  text-transform: uppercase; }
+  .card__date-events span {
+    color: #069cfa; }
+
+.card__description-events {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 19px;
+  color: #fff;
+  z-index: 3;
+  width: 90%; }
+  .card__description-events p {
+    padding-bottom: 10px; }
+
+.card__show-more {
+  padding: 2px 0px;
+  background: none;
+  font-size: 15px;
+  color: #069cfa;
+  font-weight: 700;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px; }
+
+.btn-program-height {
+  line-height: 40px; }
+
+.card__photo {
+  position: absolute; }
 
 /*# sourceMappingURL=styles.css.map */
