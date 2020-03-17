@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'PT Sans Pro';
+    src: local('PT Sans Pro Black'), local('PT-Sans-Pro-Black'),
+        url('PTSansPro-Black.woff2') format('woff2'),
+        url('PTSansPro-Black.woff') format('woff'),
+        url('PTSansPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }

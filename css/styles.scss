@@ -1,4 +1,12 @@
-
+@font-face {
+  font-family: 'PT Sans Pro';
+  src: local('PT Sans Pro Black'), local('PT-Sans-Pro-Black'),
+  url('../fonts/PTSansPro-Black.woff2') format('woff2'),
+  url('../fonts/PTSansPro-Black.woff') format('woff'),
+  url('../fonts/PTSansPro-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
 
 /*Обнуление*/
 *{
@@ -18,7 +26,6 @@ nav,footer,header,aside{display: block;}
 
 html,body{
   font-family: 'PT Sans', sans-serif;
-
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -41,18 +48,19 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
   color: #242424;
   width: 100%;
   line-height: 1;
-  font-size: 32px;
+  font-size: 34px;
   text-transform: uppercase;
-  font-weight: 700;
   margin-bottom: 40px;
 }
 p {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 22px;
   color: white;
   margin: 0 0 1.03571em 0;
 }
@@ -61,20 +69,29 @@ p {
 
 .section__wrap {
   background: black;
+  background-image: url("../img/main_bg.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
 }
 .section {
   max-width: 1170px;
   padding: 40px 15px 0;
   margin: 0 auto 35px auto;
 }
+.section_bottom-m {
+  margin: 0 auto 55px auto;
+}
 .section_padding-top {
   display: flex;
   padding: 49px 15px 0 15px;
+  margin: 0 auto 20px auto;
   justify-content: space-between;
 }
 .header__wrap {
   width: 100% !important;
   position: fixed;
+  z-index: 5;
 }
 .header {
   max-width: 1170px;
@@ -169,7 +186,7 @@ p {
   }
 }
 .description {
-  padding-top: 30px;
+  padding-top: 20px;
   width: 64.5%;
   height: 522px;
   background-image: url("../img/lektory_tokio_2.png");
@@ -182,8 +199,13 @@ p {
   font-size: 21px;
   text-transform: uppercase;
   text-shadow: 2px 2px black;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding-bottom: 17px;
   >span {
     margin-top: -30px;
+
     display: inline-block;
     font-size: 16px;
     font-weight: 700 !important;
@@ -196,19 +218,24 @@ p {
   }
 }
 .description__date {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
   text-shadow: 2px 2px black;
   font-size: 26px;
   text-transform: uppercase;
   color: #fff700 !important;
-  font-weight: 700;
+  padding-bottom: 25px;
 }
 .description__title {
-  text-shadow: 2px 2px black;
+  font-family: 'Rubik', sans-serif;
   font-weight: 700;
+  text-shadow: 2px 2px black;
+
   text-transform: uppercase;
   line-height: 1.1em;
+
   color: #fff;
-  font-size: 38px;
+  font-size: 42px;
 }
 .program-form {
   margin-top: 95px;
@@ -294,25 +321,28 @@ p {
   margin-bottom: 10px;
 }
 .card__title {
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
   margin: 0;
   width: 100%;
   padding: 0 0 10px;
   line-height: 1.2;
   letter-spacing: 2px;
-  font-weight: 800;
   font-size: 28px;
   color: white;
 }
 .card__sub-title {
+  font-family: 'Rubik', sans-serif;
   padding: 10px 0;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 600;
   color: #969696;
 }
 .card__date-events {
+  font-family: 'Rubik', sans-serif;
   font-size: 14px;
   line-height: 19px;
-  font-weight: 800;
+  font-weight: 700;
   width: 100%;
   color: #fff;
   position: relative;
@@ -324,12 +354,14 @@ p {
 }
 .card__description-events {
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 19px;
   color: #fff;
   z-index: 3;
   width: 90%;
   p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500 !important;
     padding-bottom: 10px;
     font-size: 15px !important;
     z-index: 3;
@@ -352,6 +384,7 @@ p {
 .btn-program-height {
   line-height: 40px;
   position: absolute;
+  font-size: 14px;
   width: 83%;
   bottom: 30px;
 }
@@ -376,13 +409,14 @@ p {
     height: 275px;
   }
 }
+
 .section__button {
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
   background: #069cfa none repeat scroll 0 0;
   color: #fff;
   animation: utp-one 1.25s infinite cubic-bezier(.66, 0, 0, 1);
-  height: 50px;
-  line-height: 50px;
+  height: 48px;
+  line-height: 48px;
   width: 230px;
   border-radius: 0px;
   box-shadow: 6px 6px 21px -3px #69add861;
@@ -390,6 +424,11 @@ p {
   font-size: 18px;
   text-transform: inherit;
   text-align: center;
+  cursor: pointer;
+  &:hover {
+    color: #069cfa;
+    background: white;
+  }
 }
 .section__title {
   padding: 0 0 40px 0;
@@ -399,6 +438,8 @@ p {
   margin-left: -50px;
 }
 .title__first-row {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
   text-shadow: none;
   width: 100%;
   color: #fff;
@@ -406,15 +447,21 @@ p {
   font-size: 32px;
   text-align: left;
   text-transform: uppercase;
-  font-weight: 700;
 }
 .title__second-row {
-  margin: 0 0 0 146px;
+  font-family: 'Rubik', sans-serif;
+  margin: 0 0 0 136px;
   display: block;
   color: #069cfa;
   font-size: 32px;
   text-transform: uppercase;
   font-weight: 700;
+}
+.title__second-row_small-padding {
+  margin: 0 0 0 90px;
+}
+.title__second-row_large-padding {
+  margin: 0 0 0 250px;
 }
 .section_flex-end {
   display: flex;
@@ -442,10 +489,11 @@ p {
   height: 310px;
 }
 .participation-block__title {
+  font-family: 'Rubik', sans-serif;
   padding: 0 0 60px;
   font-size: 28px;
   width: 100%;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
 }
 .participation-block__cost {
@@ -457,20 +505,20 @@ p {
 .cost-description {
   font-size: 15px;
   font-weight: 800;
-  line-height: 19px;
+  line-height: 17px;
   color: #fff;
   z-index: 3;
   width: 55%;
   text-align: left;
 }
 .cost-price {
-  margin: 0px 0 0 0px;
-  font-weight: 700;
-  float: left;
+  font-family: 'Rubik', sans-serif;
+  margin: 0 0 0 0;
+  font-weight: 600;
   font-size: 25px;
   color: #069cfa;
   letter-spacing: 1px;
-  padding: 0px 0px 0px;
+  padding: 0 0 0;
   display: table-cell;
   text-align: right;
   vertical-align: middle;
@@ -532,11 +580,11 @@ p {
   margin: 0 auto 0 auto !important;
 }
 .player {
-  width: 100%;
+  width: 545px;
   height: 330px;
   background: black;
   background-image: url("../img/sddefault.jpg") ;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 -35px;
 }
@@ -548,20 +596,22 @@ p {
   padding-top: 50px;
 }
 .large-card-title {
+  font-family: 'Rubik', sans-serif;
   text-align: center;
-  font-size: 40px;
-  margin: 0 0 14px;
-  font-weight: 800;
+  font-size: 43px;
+  margin: 0 0 10px;
+  font-weight: 700;
   padding: 50px 0 0 0;
   color: #242424;
   text-transform: uppercase;
 }
 .medium-card-title {
+  font-family: 'Rubik', sans-serif;
   text-align: center;
-  font-size: 21px !important;
+  font-size: 23px;
   width: 100%;
   margin: 0 0 14px;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   color: #242424;
 }
@@ -581,12 +631,13 @@ p {
     font-size: 17px;
     color: #505050;
     span {
+      font-family: 'Rubik', sans-serif;
       font-size: 28px;
       line-height: 22px;
       display: inline-block;
       color: #069cfa;
       text-shadow: 2px 2px 4px #bdbdbd;
-      font-weight: 700;
+      font-weight: 500;
     }
   }
 }
@@ -605,11 +656,12 @@ p {
   padding: 20px 0;
 }
 .registration__title {
+  font-family: 'Rubik', sans-serif;
   width: 100%;
   color: #fff;
   line-height: 1;
-  font-size: 32px;
-  font-weight: 800;
+  font-size: 34px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 .registration__title_another-color {
@@ -620,12 +672,13 @@ p {
   border-right: 2px solid #656565;
   padding-top: 20px;
   li {
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 17px;
     width: 100%;
     padding: 5px 0 30px;
     line-height: 1;
     color: white;
+
     .list-title {
       display: block;
       text-transform: uppercase;
@@ -662,7 +715,7 @@ p {
   }
   input {
     background: #fff !important;
-    font-size: 1em;
+    font-size: 15px;
     transition: 0.3s;
     border-bottom: 2px solid #ffffff;
     border-left: none;
@@ -671,7 +724,7 @@ p {
     border-radius: 0px;
     line-height: normal;
     width: 100%;
-    padding: 12px 10px;
+    padding: 11px 10px;
     -webkit-appearance: none;
   }
 }
@@ -690,8 +743,9 @@ p {
   margin-bottom: 10px;
 }
 .faq-block__question {
+  font-size: 18px;
   background-color: #e0e0e0;
-  padding: 19px;
+  padding: 19px 30px 19px 19px;
   border-radius: 3px;
   margin-bottom: 10px;
   box-shadow: 0 3px 18px rgba(0, 0, 0, 0.07);
@@ -721,26 +775,33 @@ p {
 .section__title_small-bottom-padding {
   padding: 0 0 30px 0;
 }
+
 .footer-wrap {
   background-color: #111111;
 }
+.section__title-small-padding {
+  padding: 0 0 20px 0;
+}
 .footer {
   max-width: 1170px;
-  padding: 40px 0 40px 0;
+  padding: 80px 15px 40px 15px;
   margin: 0 auto 0 auto;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
 }
 .footer__logo-wrap {
+
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 .footer__logo {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
   color: #069cfa;
   text-align: left;
   font-size: 33px;
-  font-weight: 800;
+
   padding: 0 0 10px 0;
 }
 .footer__logo-info {
@@ -751,11 +812,12 @@ p {
   letter-spacing: 0px;
   color: #b5b5b5;
   font-weight: 400;
-  float: left;
+  //float: left;
   width: calc(100% - 103px);
 }
 .footer__contacts {
   width: 30%;
+  margin-right: 10px;
   li {
     span {
       font-size: 15px;
@@ -766,7 +828,7 @@ p {
     }
     a {
       display: inline-block;
-      padding: 0 0 10px;
+      padding: 0 0 12px;
       font-size: 15px;
       color: #b5b5b5;
       width: 100%;
@@ -815,6 +877,8 @@ p {
 }
 .footer__speakers {
   width: 30%;
+
+
 }
 .footer-section-title {
   line-height: 1;
@@ -822,8 +886,12 @@ p {
   color: #069ced;
   font-size: 14px;
   font-weight: 600;
-  padding: 0px 0px 20px 5px;
+  padding: 0px 0px 15px 5px;
   text-transform: uppercase;
+}
+.footer-section-title_another-padding {
+  padding: 0 0 20px 0;
+
 }
 .footer__speakers-wrap {
 
@@ -836,7 +904,7 @@ p {
   height: 110px;
   background-position: center;
   background-repeat: no-repeat;
-  float: left;
+  //float: left;
   background-size: cover;
   position: relative;
   margin: 5px;
@@ -867,14 +935,480 @@ p {
   background-image: url("../img/speaker_6.jpg");
 }
 .footer__navigation-section {
-  width: 30%;
+  width: 31%;
+
 }
 .footer__navigation {
   li {
     a {
       width: 100%;
       display: flex;
+      align-items: center;
       justify-content: space-between;
+      line-height: 1;
+      color: #b5b5b5;
+      font-size: 15px;
+      margin: 0 0 10px;
+      transition: 0.3s;
+      &:hover {
+        color: #069cfa;
+        transition: 0.3s;
+      }
     }
+  }
+}
+.l-size {
+  font-size: 21px;
+  line-height: 15px;
+}
+.self-button {
+  width: 185px;
+  margin: 20px 0 15px;
+  font-size: 11px;
+  background: #333;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 30px 8px;
+  line-height: 1;
+  border-radius: 3px;
+  color: #b5b5b5;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+    transition: 0.3s;
+  }
+}
+.footer__pay {
+
+}
+.pay__title {
+  padding: 20px 0 20px;
+  width: 100%;
+  font-size: 11px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.payform-list {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    min-width: 51px;
+    min-height: 32px;
+    width: 51px;
+    height: 32px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/*----- adaptive -----*/
+
+@media screen and (max-width: 1060px) {
+  .section_padding-top {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .description {
+    padding-top: 20px;
+    width: 100%;
+
+  }
+
+  .program-form {
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 80%;
+    padding: 20px 40px 10px;
+  }
+  .section {
+    max-width: 1170px;
+    padding: 20px 15px 0;
+    margin: 0 auto 15px auto;
+  }
+  .card_width-45 {
+    width: 80%;
+  }
+  .player {
+    margin: 0 auto;
+  }
+  .padding-top {
+    padding-top: 10px;
+  }
+
+
+}
+@media screen and (max-width: 1030px) {
+  .card-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .card {
+    width: 80%;
+    padding: 30px;
+    background-color: #0a0917;
+    padding-bottom: 70px;
+    margin-bottom: 40px;
+  }
+  .card__description-events {
+    width: 60%;
+  }
+
+  .card__photo {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 35px;
+    right: 0;
+    z-index: 2;
+    img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+  .card__photo_large {
+    top: 40px;
+    width: 350px;
+    height: 350px;
+    img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+  .btn-program-height {
+    width: 90%;
+  }
+
+  .participation-block_wrap {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inner-section {
+    width: 100%;
+    position: relative;
+    padding: 0 0 0 0;
+  }
+  .participation-block {
+    width: 60%;
+  }
+  .special {
+    display: none;
+  }
+  .section__title_left-margin {
+    margin-left: 0;
+  }
+
+  .title__first-row {
+    font-size: 28px;
+  }
+  .title__second-row {
+    font-size: 28px;
+  }
+
+
+  .card-flex-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card_width-50 {
+    width: 80%;
+  }
+  .large-card-title {
+    font-size: 30px;
+    margin: 0 0 10px;
+    padding: 20px 0 0 0;
+  }
+  .medium-card-title {
+    font-size: 19px;
+    margin: 0 0 14px;
+  }
+  .title-info {
+    font-size: 17px;
+    line-height: 21px;
+    padding: 10px 0 10px;
+  }
+  .cost-list {
+    border: none;
+    li {
+      text-align: center;
+    }
+  }
+  .registration__title {
+    font-size: 30px;
+  }
+  .card_width-50_margin-right {
+    margin-right: 0;
+  }
+
+}
+
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    max-width: 1170px;
+    padding: 80px 15px 40px 15px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer__contacts {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .footer__speakers {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .footer__navigation-section {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .speaker {
+    width: 100%;
+  }
+}
+
+
+
+
+@media screen and (max-width: 950px) {
+  .program-form {
+    width: 100%;
+  }
+  .btn-program-height {
+    width: 90%;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 920px) {
+
+}
+
+
+@media screen and (max-width: 720px) {
+  .description__title {
+    font-size: 34px;
+  }
+  .btn-program-height {
+    width: 88%;
+
+  }
+
+  .card__photo {
+    width: 250px;
+    height: 250px;
+    img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  .card__photo_large {
+    width: 250px;
+    height: 250px;
+    img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  .card__description-events {
+    width: 80%;
+  }
+
+  .card__title {
+    font-size: 24px;
+  }
+  .card__date-events {
+    font-family: 'Rubik', sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    z-index: 3;
+    text-transform: uppercase;
+
+  }
+.participation-block__title {
+  padding: 0 0 30px;
+  font-size: 23px;
+}
+.cost-price {
+  font-size: 21px;
+}
+  .participation-block_fixed-height {
+    height: 280px;
+  }
+  .player {
+    width: 300px;
+    height: 170px;
+  }
+  .title__first-row {
+    font-size: 25px;
+  }
+  .title__second-row {
+    font-size: 25px;
+  }
+  .registration__title {
+    font-size: 25px;
+  }
+
+}
+@media screen and (max-width: 650px) {
+  h2 {
+    font-size: 20px;
+  }
+  .card__photo {
+    width: 200px;
+    height: 200px;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .card__photo_large {
+    width: 250px;
+    height: 250px;
+    img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  .card__title {
+    font-size: 21px;
+  }
+  .description {
+    background-image: url("../img/lektory_tokio_2.png");
+    background-size: 200px 300px;
+    background-position: 100% 0;
+    height: 320px;
+  }
+  .btn-program-height {
+    width: 84%;
+  }
+  .card {
+    width: 100%;
+  }
+
+  .participation-block {
+    width: 100%;
+  }
+  .cost-price {
+    font-size: 18px;
+  }
+  .title__first-row {
+    font-size: 21px;
+  }
+  .title__second-row {
+    font-size: 21px;
+  }
+  .padding-top {
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 17px;
+      color: white;
+      margin: 0 0 10px 0;
+    }
+  }
+  .registration__title {
+    font-size: 21px;
+  }
+  .title__second-row_large-padding {
+    margin: 0 0 0 150px;
+  }
+  .faq-block__question {
+    font-size: 16px;
+  }
+  .faq-block__answer {
+    font-size: 14px;
+  }
+
+}
+@media screen and (max-width: 520px) {
+  .description {
+    background-image: url("../img/lektory_tokio_2.png");
+    background-size: 140px 220px;
+    background-position: 100% 0;
+    height: 230px;
+  }
+  .description__title {
+    font-size: 25px;
+  }
+  .description__date {
+    font-size: 20px;
+  }
+  .btn-program-height {
+    width: 82%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card__photo {
+    width: 150px;
+    height: 150px;
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .card__photo_large {
+    width: 150px;
+    height: 150px;
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .card__description-events {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .card__photo {
+    width: 120px;
+    height: 120px;
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  .card__photo_large {
+    width: 120px;
+    height: 120px;
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  .card__title {
+    font-size: 18px;
+  }
+  .description__title {
+    font-size: 18px;
+  }
+  .description__date {
+    font-size: 16px;
+  }
+  .btn-program-height {
+    width: 80%;
+  }
+  .player {
+    width: 270px;
+    height: 140px;
   }
 }
