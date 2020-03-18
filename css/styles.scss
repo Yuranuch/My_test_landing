@@ -107,7 +107,7 @@ p {
 
 .section__wrap {
   background: black;
-  background-image: url("../img/main_bg.jpg");
+  background-image: url("../img/default/main_bg.jpg");
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;
@@ -148,7 +148,6 @@ p {
       color: #ffffff !important;
     }
   }
-
   .header__navigation {
     a {
       color: #333 !important;
@@ -158,6 +157,11 @@ p {
       &.active {
         color: #069cfa;
       }
+    }
+  }
+  .burger-flex {
+    span {
+      background: #333;
     }
   }
 }
@@ -388,7 +392,23 @@ p {
     line-height: 1;
   }
 }
-
+.btn-program-form {
+  box-shadow: none;
+  font-size: 13px;
+  line-height: 29px;
+  width: 100% !important;
+  background: rgba(37, 37, 39, 0);
+  border: 2px solid #069cfa;
+  color: #069cfa;
+  margin: 0 auto 0 auto;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: utp-one 1.25s infinite cubic-bezier(.66, 0, 0, 1);
+  &:hover {
+    background: #069cfa;
+    color: #fff;
+  }
+}
 .description__date {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
@@ -511,20 +531,18 @@ p {
   width: 100%;
 
 }
-
 .btn-program {
   box-shadow: none;
   font-size: 13px;
   line-height: 29px;
-  width: 100%;
+  width: 100% !important;
   background: rgba(37, 37, 39, 0);
   border: 2px solid #069cfa;
   color: #069cfa;
-  margin: 0 0 0 0;
+  margin: 0 auto 0 auto;
   font-weight: 700;
   text-transform: uppercase;
   animation: utp-one 1.25s infinite cubic-bezier(.66, 0, 0, 1);
-
   &:hover {
     background: #069cfa;
     color: #fff;
@@ -683,7 +701,7 @@ p {
 }
 
 .section__button {
-  margin: 0 auto 0 auto;
+  margin: 0 auto 20px auto;
   background: #069cfa none repeat scroll 0 0;
   color: #fff;
   animation: utp-one 1.25s infinite cubic-bezier(.66, 0, 0, 1);
@@ -1384,10 +1402,9 @@ p {
   left: 0;
   margin: 0;
   padding: 0;
-  //overflow-y: scroll;
   transition: opacity .15s linear;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
+
 }
 
 .modal_opacity-bg-active {
@@ -1541,6 +1558,7 @@ p {
   .padding-top {
     padding-top: 10px;
   }
+
 }
 
 @media screen and (max-width: 1030px) {
@@ -1780,6 +1798,10 @@ p {
       width: 250px;
       height: 250px;
     }
+  }
+
+  .section__wrap {
+    background-image: url("../img/default/bg_vertical.png");
   }
 
   .card__description-events {

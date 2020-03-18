@@ -12,7 +12,6 @@ $(function () {
     });
 });
 
-
 $(window).scroll(function () {
     if ($(".header__wrap").offset().top > 0) {
         $(".header__wrap").addClass("header__wrap_active");
@@ -20,7 +19,6 @@ $(window).scroll(function () {
         $(".header__wrap").removeClass("header__wrap_active");
     }
 });
-
 
 $('.burger-menu').click(function () {
     $(".burger-menu__list").toggleClass('burger-menu__list_active');
@@ -40,7 +38,6 @@ $('.faq-block__question').click(function () {
     }
 });
 
-
 // Модальное окно №1
 $('#id_30').click(function () {
     $(".modal_opacity-bg").toggleClass('modal_opacity-bg-active');
@@ -50,14 +47,7 @@ $('#close-modal').click(function () {
     $(".modal_k").toggleClass('modal_k-active');
     $(".modal_opacity-bg").toggleClass('modal_opacity-bg-active');
 });
-$('#close-modal__message-list').click(function () {
-    $(".message-list").toggleClass('message-list-active');
-    $(".hide2").toggleClass('hide-active');
-});
 
-$('#show-deploy-table').click(function () {
-    $(".deployed").toggleClass('deployed-active');
-});
 
 $(document).mouseup(function (e) {
     var modalctr = $(".modal_opacity-bg-active");
